@@ -13,7 +13,7 @@
 <h3>Pasos para Ejecutar:</h3>
 
 <h3>1-Clone este repositorio:</h3>
-<p>git clone [https://github.com/tu-usuario/todo-app-api.git](https://github.com/OliveraIgnacio/ToDoListApp)</p>
+<p>git clone https://github.com/OliveraIgnacio/ToDoListApp</p>
 <p>cd todo-app-api</p>
 
 <h3>2- Configura la Base de Datos:</h3>
