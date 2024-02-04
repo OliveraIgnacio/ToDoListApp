@@ -1,0 +1,21 @@
+<div class="main-container">
+<mat-toolbar color="primary">
+  <button mat-button color="accent" [routerLink]="['/']">
+    ToDo List
+  </button>    
+
+  <button mat-button color="accent" [routerLink]="['/tasks/add']">
+      <i class="material-icons">add</i>
+      Add Task
+    </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+
+<footer class="footer">
+<p>&copy; 2024 ToDoList App. All rights reserved :)</p>
+</footer>
+
+
+</div>

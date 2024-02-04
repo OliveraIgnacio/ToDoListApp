@@ -1,0 +1,29 @@
+<div class="task-details-container">
+  <div class="task-details-header">
+    <h2>Detalles de la Tarea</h2>
+    <button mat-icon-button class="task-details-back-button" (click)="navigateBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+  <div class="task-details-row">
+    <strong>ID:</strong> {{ task?.taskId }}
+  </div>
+  <div class="task-details-row">
+    <strong>Título:</strong> {{ task?.title }}
+  </div>
+  <div class="task-details-row">
+    <strong>Descripción:</strong> {{ task?.description }}
+  </div>
+  <div class="task-details-row">
+    <strong>Fecha de Vencimiento:</strong> {{ task?.dueDate | date }}
+  </div>
+  <div class="task-details-row">
+    <strong>Completada:</strong> {{ task?.isCompleted ? 'Sí' : 'No' }}
+  </div>
+
+  <div class="task-details-actions">
+    <button mat-fab color="primary" (click)="editTask()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+</div>

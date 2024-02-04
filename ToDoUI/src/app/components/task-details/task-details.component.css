@@ -1,0 +1,27 @@
+/* task-details.component.css */
+
+.task-details-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.task-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-details-back-button {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.task-details-row {
+  margin-bottom: 15px;
+}
+

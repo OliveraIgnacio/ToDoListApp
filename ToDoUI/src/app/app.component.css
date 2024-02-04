@@ -1,0 +1,63 @@
+/* app.component.css */
+.main-container {
+  padding-bottom: 50px; /* Ajusta según tu preferencia para el espacio entre el contenido y el footer */
+}
+
+.footer {
+  background-color: #f2f2f2; /* Color de fondo del footer, ajusta según tu diseño */
+  padding: 10px;
+  text-align: center;
+}
+
+mat-toolbar {
+    background-color: #2196F3;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  mat-toolbar span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button {
+    margin-left: 16px;
+    color: #fff;
+  }
+  
+
+  mat-toolbar button {
+    font-size: 1rem; 
+    font-weight: bold; 
+  }
+  
+  mat-toolbar button i {
+    margin-right: 8px; 
+  }
+
+mat-toolbar button {
+    font-size: 1rem; 
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  mat-toolbar button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+
+/* Estilos para el footer */
+.footer {
+  background-color: #2196F3; /* Color de fondo del footer */
+  color: #fff; /* Color del texto en blanco */
+  text-align: center;
+  padding: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+

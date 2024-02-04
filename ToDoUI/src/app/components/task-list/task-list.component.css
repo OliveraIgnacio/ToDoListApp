@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto; 
+    margin-top: 16px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  th {
+    background-color: #f2f2f2; 
+    text-align: center;
+  }
+  
+  td {
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .shorts{
+    width: 200px;
+  }
+
+  .middle{
+    width: 300px;
+  }
+
+  .long{
+    width: 350px;
+  }
+  
+  /* Colores alternativos para las filas pares */
+  tr:nth-child(even) td {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    margin-right: 8px; 
+  }
+
+  button:hover{
+    background-color: rgba(192, 192, 192, 0.63)
+  }
