@@ -27,3 +27,18 @@
 <h3>4- Inicia la API:</h3>
 <p>dotnet run</p>
 <p>La API estará disponible en http://localhost:5004.</p>
+
+
+<h3>Instrucciones para Ejecutar la UI Localmente</h3>
+<h4>Requisitos Previos</h4>
+<ul>
+<li>Node.js</li>
+<li>Angular CLI 16</li>
+</ul>
+
+<h3>Pasos para Ejecutar:</h3>
+
+<h3>1-Instalar dependencias</h3>
+<p>npm install</p>
+<h1>Iniciar la aplicaion</h1>
+<p>ng serve</p>
