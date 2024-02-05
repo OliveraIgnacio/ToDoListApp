@@ -1,44 +1,63 @@
-<h1>ToDo App</h1>
-</br>
-<h3>Descripción</h3>
-<h5>Esta aplicación ToDo permite a los usuarios gestionar tareas, agregar nuevas, editarlas, ver detalles y eliminarlas.</h5>
+# ToDo App
 
-<h3>Instrucciones para Ejecutar la API Localmente</h3>
-<h4>Requisitos Previos</h4>
-<ul>
-<li>.NET Core 7</li>
-<li> SQL Server</li>
-</ul>
+## Description
+This ToDo application allows users to manage tasks, add new ones, edit them, view details, and delete them.
 
-<h3>Pasos para Ejecutar:</h3>
+## Instructions to Run the API Locally
 
-<h3>1-Clone este repositorio:</h3>
-<p>git clone https://github.com/OliveraIgnacio/ToDoListApp</p>
-<p>cd todo-app-api</p>
+### Prerequisites
+- [.NET Core 7](https://dotnet.microsoft.com/download)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
-<h3>2- Configura la Base de Datos:</h3>
+### Steps to Run:
+1. Clone this repository:
 
-<p>Abre appsettings.json y actualiza la cadena de conexión bajo la sección "ConnectionStrings" con tus propias credenciales de SQL Server.</p>
+    ```bash
+    git clone https://github.com/OliveraIgnacio/ToDoListApp
+    cd todo-app-api
+    ```
 
-<h3>3- Ejecuta Migraciones:</h3>
+2. Configure the Database:
+   - Open `appsettings.json` and update the connection string under the "ConnectionStrings" section with your SQL Server credentials.
 
-<p>dotnet ef database update</p>
+3. Run Migrations:
 
-<h3>4- Inicia la API:</h3>
-<p>dotnet run</p>
-<p>La API estará disponible en http://localhost:5004.</p>
+    ```bash
+    dotnet ef database update
+    ```
 
+4. Start the API:
 
-<h3>Instrucciones para Ejecutar la UI Localmente</h3>
-<h4>Requisitos Previos</h4>
-<ul>
-<li>Node.js</li>
-<li>Angular CLI 16</li>
-</ul>
+    ```bash
+    dotnet run
+    ```
 
-<h3>Pasos para Ejecutar:</h3>
+5. The API will be available at [http://localhost:5004](http://localhost:5004).
 
-<h3>1-Instalar dependencias</h3>
-<p>npm install</p>
-<h1>Iniciar la aplicaion</h1>
-<p>ng serve</p>
+## Instructions to Run the UI Locally
+
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
+
+### Steps to Run:
+1. Clone this repository:
+
+    ```bash
+    git clone https://github.com/OliveraIgnacio/ToDoListApp
+    cd todo-app-ui
+    ```
+
+2. Install Dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Start the Application:
+
+    ```bash
+    ng serve
+    ```
+
+4. The application will be available at [http://localhost:4200](http://localhost:4200).
