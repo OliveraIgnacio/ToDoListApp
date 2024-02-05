@@ -9,7 +9,7 @@ import { Task } from '../../models/task.model';
   styleUrls: ['./task-details.component.css']
 })
 export class TaskDetailsComponent implements OnInit {
-  task: Task | undefined;
+  task: Task | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,7 +21,7 @@ export class TaskDetailsComponent implements OnInit {
     // Suscribirse a los cambios en los parámetros de la ruta
     this.route.params.subscribe(params => {
       const taskId = params['id'];
-
+    
       // Obtener los detalles de la tarea utilizando el servicio TaskService
       this.taskService.getTask(taskId).subscribe(
         (task) => {

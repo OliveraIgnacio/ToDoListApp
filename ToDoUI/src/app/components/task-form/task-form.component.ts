@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService } from '../../services/task/task.service';
-import { FormControl } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-task-form',

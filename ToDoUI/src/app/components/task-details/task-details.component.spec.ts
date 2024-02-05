@@ -1,66 +1,54 @@
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { TaskDetailsComponent } from './task-details.component';
-// import { ActivatedRoute, convertToParamMap } from '@angular/router';
-// import { of } from 'rxjs';
-// import { HttpClientTestingModule } from '@angular/common/http/testing'; // Importar el módulo de prueba de HttpClient
-// import { MatIconModule } from '@angular/material/icon'; // Importar MatIconModule
-// import { MatIconTestingModule } from '@angular/material/icon/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TaskDetailsComponent } from './task-details.component';
+import { ActivatedRoute } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { of } from 'rxjs';
+import { TaskService } from 'src/app/services/task/task.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MatIconModule } from '@angular/material/icon';
 
-// describe('TaskDetailsComponent', () => {
-//   let component: TaskDetailsComponent;
-//   let fixture: ComponentFixture<TaskDetailsComponent>;
+describe('TaskDetailComponent', () => {
+  let component: TaskDetailsComponent;
+  let fixture: ComponentFixture<TaskDetailsComponent>;
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [TaskDetailsComponent],
-//       imports: [HttpClientTestingModule, MatIconModule],
-//       providers: [
-//         {
-//           provide: ActivatedRoute,
-//           useValue: {
-//             paramMap: of(convertToParamMap({ id: 1 })),
-//           },
-//         },
-//       ],
-//     });
+  const activatedRouteMock = {
+    snapshot: {
+      paramMap: {
+        get: jasmine.createSpy('get').and.returnValue('1') // Simulamos el id de la tarea en la ruta
+      }
+    }
+  };
 
-//      // Configurar MatIconRegistryTestingModule
-//      TestBed.overrideModule(MatIconModule, {
-//         remove: {
-//           imports: [MatIconTestingModule],
-//         },
-//         add: {
-//           imports: [MatIconTestingModule],
-//         },
-//       });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [TaskDetailsComponent],
+      imports: [RouterTestingModule, HttpClientTestingModule, MatIconModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({ id: 1 }), // Simula que se proporciona el parámetro de la ruta
+          },
+        },
+        TaskService, // Agregamos TaskService como proveedor
+      ],
+    }).compileComponents();
+  });
 
-//     fixture = TestBed.createComponent(TaskDetailsComponent);
-//     component = fixture.componentInstance;
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(TaskDetailsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
-//   it('should display taks details', () => {
-//     //Simular datos de tarea
-//     const task = {
-//         taskId: 1,
-//         title: 'Test Task',
-//         description: 'This is a test task',
-//         dueDate: new Date(),
-//         isCompleted: false,
-//     };
-
-//     //Asignar datos de tarea al componente
-//     component.task = task;
-
-//     //Actualizar la vista
-//     fixture.detectChanges();
-
-//     //Verificar que los datos de la tarea se muestrenn correctamente
-//     const compiled = fixture.nativeElement;
-//     expect(compiled.querySelector('.task-title').textContent).toContain(task.title);
-//     expect(compiled.querySelector('.task-description').textContent).toContain(task.description);
-//   })
-// });
+  it('should initialize task property', () => {
+    expect(component.task).toBeDefined();
+    expect(component.task).toBeNull(); 
+  });
+  
+  
+});

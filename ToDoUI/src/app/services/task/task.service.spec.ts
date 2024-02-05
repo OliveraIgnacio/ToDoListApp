@@ -1,16 +1,26 @@
-// import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { TaskService } from './task.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-// import { TaskService } from './task.service';
+describe('TaskService', () => {
+  let service: TaskService;
 
-// describe('TaskService', () => {
-//   let service: TaskService;
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(TaskService);
+  });
 
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({});
-//     service = TestBed.inject(TaskService);
-//   });
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
 
-//   it('should be created', () => {
-//     expect(service).toBeTruthy();
-//   });
-// });
+  it('should have a baseURL property', () => {
+    expect(service.apiUrl).toBeDefined();
+  });
+
+  it('should have a baseURL property with a valid URL', () => {
+    expect(service.apiUrl).toMatch(/^http(s)?:\/\/\S+/);
+  });
+});
